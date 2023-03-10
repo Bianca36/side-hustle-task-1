@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Week 1 task</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form action="">
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" required>
+            
+            <label for="lname">last Name:</label>
+            <input type="text" name="fname" id="fname" required>
+            
+            <label for="tel">Phone No:</label>
+            <input type="tel" name="tel" id="tel" required>
+
+            <label for="tel">Gender:</label>
+            <label for="">Male<input type="radio" name="sex" id="male" required></label>
+            <label for="">female<input type="radio" name="sex" id="female" required></label>
+
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+           
+            <label for="pword">Password:</label>
+            <input type="password" name="pword" id="pword" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+            
+            <button>Submit</button>
+
+        </form>
+    </div>
+    <script>
+        const email =
+        document.getElementById("mail")
+
+        email.addEventListener("input",
+        (event) => {
+            if 
+            (email.validity.typeMismatch) {
+                email.setCustomValidity("Email Error");
+            } else {
+                email.setCustomValidity("sucessful");
+
+            }
+        });
+
+    </script>
+</body>
+</html>
